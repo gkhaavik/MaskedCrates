@@ -1,0 +1,173 @@
+# The crates identifier
+# example:
+# crate item display, shown at {crate} variable some places
+#   name: "&c&lExample Crate"
+# crate item skull texture
+#   skin: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDk5MzZiNWZhMTkyNGY5MWQxZGUzZTg3MGVkNzE0MGJmNDM1YzFhMWE1NWRhNTczZmMzYTg4ZWJkNWJlYyJ9fX0="
+# crate item lore when i players possession
+#   lore:
+#     - ""
+#     - " &7&oThis is an example crate"
+#     - " &7&omake your own lore."
+#     - ""
+#     - " &c&lINFORMATION"
+#     - " &4➢ &fLeftclick &7to &nopen&7 crate"
+#     - " &4➢ &fRightclick &7to &nview&7 rewards"
+#     - ""
+# crate lore in "/crates show" menu
+#   lore2:
+#     - ""
+#     - " &7&oThis is an example crate"
+#     - " &7&omake your own lore."
+#     - ""
+#     - " &4➢ &fClick to see rewards!"
+#     - ""
+# crate animation (SHAKE or POUCH, more coming soon)
+#   animation: SHAKE
+# display shown above the crate when animation ends
+#   hologram:
+#     enabled: true
+#     lines:
+#       - "&c&lEXAMPLE CRATE"
+#       - "&7You've won &c{reward} &7from this crate"
+#   rewards:
+# reward identifier
+#     "1":
+# reward displayname shown when {reward} and in the crate rewards menu
+#       name: "&a5x Diamond block"
+# reward material, use 1.15 materials https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#       material: "DIAMOND_BLOCK"
+# reward lore
+#       lore:
+#         - "&75x diamond blocks"
+# the amount shown in the crate rewards menu
+#       amount: 5
+# the change of player getting this item
+#       chance: 20
+# OPTIONAL - a custom message instead of using the default in lang.yml
+#       message: "&7You won &n{reward}&7 with &c{chance}&7% chance."
+# a list of item rewards the receives [ "<material>;<amount>" ]
+#       items:
+#         - "DIAMOND_BLOCK;5"
+# ist of commands to be called. to get the player do {player}
+#       commands:
+# USE {player} to specify the reward winner
+#         - "eco give {player} 1000"
+#     "3":
+#       name: "&c&lMask Crate"
+# You can use "head-<skintexture>" to display a skull with a texture
+#       material: "head-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0="
+#       lore:
+#         - "&71 Mask Crate"
+#       amount: 1
+#       chance: 1
+#       command:
+#         - "crates give {player} mask 1"
+crates:
+  example:
+    name: "&c&lExample Crate"
+    skin: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY5MDk5MzZiNWZhMTkyNGY5MWQxZGUzZTg3MGVkNzE0MGJmNDM1YzFhMWE1NWRhNTczZmMzYTg4ZWJkNWJlYyJ9fX0="
+    lore:
+      - ""
+      - " &7&oThis is an example crate"
+      - " &7&omake your own lore."
+      - ""
+      - " &c&lINFORMATION"
+      - " &4➢ &fLeftclick &7to &nopen&7 crate"
+      - " &4➢ &fRightclick &7to &nview&7 rewards"
+      - ""
+    lore2:
+      - ""
+      - " &7&oReceive from winning a"
+      - " &7&oagainst another empire"
+      - ""
+      - " &4➢ &fClick to see rewards!"
+      - ""
+    animation: SHAKE
+    hologram:
+      enabled: true
+      lines:
+        - "&c&lEXAMPLE CRATE"
+        - "&7You've won &c{reward} &7from this crate"
+    rewards:
+      "1":
+        name: "&a5x Diamond block"
+        material: "DIAMOND_BLOCK"
+        lore:
+          - "&75x diamond blocks"
+        amount: 5
+        chance: 20
+        message: "&7You won &n{reward}&7 with &c{chance}&7% chance."
+        items:
+          - "DIAMOND_BLOCK;5"
+      "2":
+        name: "&a1000$"
+        material: "PAPER"
+        lore:
+          - "&71000$ ingame"
+        amount: 1
+        chance: 5
+        message: "&7You won &n{reward}&7 with &c{chance}&7% chance."
+        commands:
+          - "eco give {player} 1000"
+      "3":
+        name: "&c&lMask Crate"
+        material: "head-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0="
+        lore:
+          - "&71 Mask Crate"
+        amount: 1
+        chance: 1
+        commands:
+          - "crates give {player} mask 1"
+  example2:
+    name: "&c&lExample Crate"
+    skin: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0="
+    lore:
+      - ""
+      - " &7&oReceive from winning a"
+      - " &7&oagainst another empire"
+      - ""
+      - " &7Purchase @&c&nshop.server.com"
+      - " &7or win it from other crates."
+      - ""
+      - " &c&lINFORMATION"
+      - " &4➢ &fLeftclick &7to &nopen&7 crate"
+      - " &4➢ &fRightclick &7to &nview&7 rewards"
+      - ""
+    lore2:
+      - ""
+      - " &7&oReceive from winning a"
+      - " &7&oagainst another empire"
+      - ""
+      - " &7Purchase @&c&nshop.server.com"
+      - " &7or win it from other crates."
+      - ""
+      - " &4➢ &fClick to see rewards!"
+      - ""
+    animation: POUCH
+    hologram:
+      enabled: true
+      lines:
+        - "&c&lEXAMPLE2 CRATE"
+        - "&7You've won &c{reward} &7from this crate"
+    rewards:
+      "1":
+        name: "&a5x Diamond block"
+        material: "DIAMOND_BLOCK"
+        lore:
+          - "5x diamond blocks"
+        amount: 5
+        chance: 20
+        message: "&7You won &n{reward}&7 with &c{chance}&7% chance."
+        items:
+          - "DIAMOND_BLOCK;5"
+      "2":
+        name: "&a1000$"
+        material: "PAPER"
+        lore:
+          - "1000$ ingame"
+        amount: 1
+        chance: 5
+        message: "&7You won &n{reward}&7 with &c{chance}&7% chance."
+        commands:
+          - "eco give {player} 1000"
