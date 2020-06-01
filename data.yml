@@ -1,0 +1,5 @@
+# This file is to save player who leaves while opening a crate so that
+# he'll still get the rewards when joins again. You will be able too
+# see the date he left, the crate, reward along with his uuid.
+#
+# YOU MAY EDIT DATA AT YOUR OWN RISK AS THIS MIGHT EFFECT THE USER.
