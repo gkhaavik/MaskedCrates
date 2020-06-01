@@ -6,6 +6,9 @@ prefix: "&8[&cMaskedCrates&8] "
 broadcast-opening: false
 # seconds before player receives rewards on join
 rejoin-reward-receive-delay: 5
+# Crate interaction needs permission, if true players need "maskedcrates.open" to open crates
+# and see crate rewards.
+players-need-permission: false
 # world in which the player cannot open crates
 disabled-world:
   - "warzone"
