@@ -7,7 +7,13 @@ NO_INVENTORY_ROOM: "&7No room in inventory, dropping &c&n{amount}&7 items."
 # Message sent if player's inventory is full when trying to open crate
 CLEAR_INVENTORY_ROOM: "&7Clear some space in your inventory."
 # Message sent when the plugin has reloaded
-RELOADED: "&7&nReloaded&7 the plugin."
+RELOADED: "&7&nReloaded&7 the plugin, it took {time}ms."
+# Message sent if plugin is about to reload, and player attempts to open a crate
+CURRENTLY_RELOADING: "&7You cannot open crates while plugin is about to reload"
+# Message sent on start of reload
+RELOAD_START: "&7Reloading plugin..."
+# Message sent if someone is already opening crates while opening a crate
+RELOAD_DELAYED: "&7Reload will start when ongoing animations end."
 # Message sent when a player tries to place a crate.
 CANNOT_PLACE: "&7You cannot place crates on the ground."
 # Message sent if trying to give a crate that does not exist
@@ -28,6 +34,9 @@ REJOIN_REWARD_RECEIVED: "&7Received the reward from the crate, since you left wh
 CURRENTLY_OPENING: "&cYou cannot do this while opening a crate!"
 # Message sent if player attempts to teleport while opening a crate
 TELEPORT_DISABLE: "&7You cannot teleport while opening crates."
+# Message sent if player is not on the ground and attempts to open crate
+NOT_GROUNDED: "&7You need to be standing on the ground before opening"
+
 # Message sent if no message is set for a reward in crates.yml
 DEFAULT_REWARD_MESSAGE: "&7You won &c{reward}&7 from &c{crate} &7crate."
 # PLAYER_ALREADY_OPENING - Sent to the player/console if the player is already opening a crate
