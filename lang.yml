@@ -1,68 +1,42 @@
 # Message sent to player who receives a crate
-PLAYER_RECEIVED_CRATE: "&7You have received {amount}x &c&n{crate}&7 crate(s)."
-# Message sent to player who attempts to open a crate while already opening
-ALREADY_OPENING: "&7You are already opening a crate"
-# Message sent when player receives more items than slots free in inventory
-NO_INVENTORY_ROOM: "&7No room in inventory, dropping &c&n{amount}&7 items."
-# Message sent if player's inventory is full when trying to open crate
-CLEAR_INVENTORY_ROOM: "&7Clear some space in your inventory."
-# Message sent when the plugin has reloaded
-RELOADED: "&7&nReloaded&7 the plugin, it took {time}ms."
-# Message sent if plugin is about to reload, and player attempts to open a crate
-CURRENTLY_RELOADING: "&7You cannot open crates while plugin is about to reload"
-# Message sent on start of reload
-RELOAD_START: "&7Reloading plugin..."
-# Message sent if someone is already opening crates while opening a crate
-RELOAD_DELAYED: "&7Reload will start when ongoing animations end."
-# Message sent when a player tries to place a crate.
-CANNOT_PLACE: "&7You cannot place crates on the ground."
-# Message sent if trying to give a crate that does not exist
-INVALID_CRATE: "&c&n{crate}&7 is not a valid crate."
-# Message sent if trying to give a crate to a player that does not exist
-INVALID_PLAYER: "&c&n{player}&7 is not a valid player."
-# Message sent if the player does not have permission to a command
-NO_PERMISSION: "&cYou dont have permission to do this."
-# Message sent to all online players if broadcast-opening is true in config.yml
-BROADCAST_OPENING_CRATE: "&c{player} &7is opening &c&n{crate}&7 crate."
-# Message sent when successfully opening crate
-OPENING_CRATE: "&7You are opening &c&n{crate}&7 crate."
-# Message sent if player is in a disabled world (set in config.yml)
-DISABLED_WORLD: "&cYou cannot open crates in this world."
-# Message sent to player who joins after had left while opening a crate
-REJOIN_REWARD_RECEIVED: "&7Received the reward from the crate, since you left while opening."
-# Message sent if player attempts to preview crate rewards while opening a crate
-CURRENTLY_OPENING: "&cYou cannot do this while opening a crate!"
-# Message sent if player attempts to teleport while opening a crate
-TELEPORT_DISABLE: "&7You cannot teleport while opening crates."
-# Message sent if player is not on the ground and attempts to open crate
-NOT_GROUNDED: "&7You need to be standing on the ground before opening"
-
-# Message sent if no message is set for a reward in crates.yml
-DEFAULT_REWARD_MESSAGE: "&7You won &c{reward}&7 from &c{crate} &7crate."
-# PLAYER_ALREADY_OPENING - Sent to the player/console if the player is already opening a crate
-# GAVE_CRATE - Sent to the crate giver, when giving a player a crate.
+PLAYER_RECEIVED_CRATE: '&7You have received {amount}x &c&n{crate}&7 crate(s).'
+ALREADY_OPENING: '&7You are already opening a crate'
+NO_INVENTORY_ROOM: '&7No room in inventory, dropping &c&n{amount}&7 items.'
+CLEAR_INVENTORY_ROOM: '&7Clear some space in your inventory.'
+RELOADED: '&7&nReloaded&7 the plugin, it took {time}ms.'
+CURRENTLY_RELOADING: '&7You cannot open crates while plugin is about to reload'
+RELOAD_START: '&7Reloading plugin...'
+RELOAD_DELAYED: '&7Reload will start when ongoing animations end.'
+ALREADY_RELOADING: '&7Plugin is already reloading!'
+CANNOT_PLACE: '&7You cannot place crates on the ground.'
+INVALID_CRATE: '&c&n{crate}&7 is not a valid crate.'
+INVALID_PLAYER: '&c&n{player}&7 is not a valid player.'
+NO_PERMISSION: '&cYou dont have permission to do this.'
+BROADCAST_OPENING_CRATE: '&c{player} &7is opening &c&n{crate}&7 crate.'
+OPENING_CRATE: '&7You are opening &c&n{crate}&7 crate.'
+DISABLED_WORLD: '&cYou cannot open crates in this world.'
+REJOIN_REWARD_RECEIVED: '&7Received the reward from the crate, since you left while
+  opening.'
+CURRENTLY_OPENING: '&cYou cannot do this while opening a crate!'
+TELEPORT_DISABLE: '&7You cannot teleport while opening crates.'
+NOT_GROUNDED: '&7You need to be standing on the ground before opening'
+DEFAULT_REWARD_MESSAGE: '&7You won &c{reward}&7 from &c{crate} &7crate.'
 SENDER_MESSAGES:
-  PLAYER_ALREADY_OPENING: "&c{player} &7is already opening a crate"
-  GAVE_CRATE: "&7You gave &c&n{player}&7 {amount}x &c&n{crate}&7 crate(s)."
-
-#Message sent to damager if the player is opening a crate
-DAMAGE_CRATE_OPENER: "&7You cant hurt &c{player}&7, while they are opening crates"
-
-# These are self explanatory :D
+  PLAYER_ALREADY_OPENING: '&c{player} &7is already opening a crate'
+  GAVE_CRATE: '&7You gave &c&n{player}&7 {amount}x &c&n{crate}&7 crate(s).'
+DAMAGE_CRATE_OPENER: '&7You cant hurt &c{player}&7, while they are opening crates'
 COMMAND_USAGE:
-  GIVE_USAGE: "&7Usage: &8/crates give <player> <crate> [amount]"
-  GIVEALL_USAGE: "&7Usage: &8/crates giveall <crate> [amount]"
-  CREATE_USAGE: "&7Usage: &8/crates create <crate>"
-  OPEN_USAGE: "&7Usage: &8/crates open <crate> <player>"
-# DENIED_OPENING_IN_ENEMY_LAND - Sent if world is not disabled & lands hook is enabled & opening in enemy land is enabled in config.yml
+  GIVE_USAGE: '&7Usage: &8/crates give <player> <crate> [amount]'
+  GIVEALL_USAGE: '&7Usage: &8/crates giveall <crate> [amount]'
+  CREATE_USAGE: '&7Usage: &8/crates create <crate>'
+  OPEN_USAGE: '&7Usage: &8/crates open <crate> <player>'
 LANDS_HOOK:
-  DENIED_OPENING_IN_ENEMY_LAND: "&cYou cant open crates in land in which you're not trusted."
-
-# Message sent on "/crates" or "/crates help"
+  DENIED_OPENING_IN_ENEMY_LAND: '&cYou cant open crates in land in which you''re not
+    trusted.'
 help:
-  - "&8- &7/crates help"
-  - "&8- &7/crates show [player]"
-  - "&8- &7/crates reload"
-  - "&8- &7/crates open <crate> <player>"
-  - "&8- &7/crates give <player> <crate> [amount]"
-  - "&8- &7/crates giveall <crate> [amount]"
+- '&8- &7/crates help'
+- '&8- &7/crates show [player]'
+- '&8- &7/crates reload'
+- '&8- &7/crates open <crate> <player>'
+- '&8- &7/crates give <player> <crate> [amount]'
+- '&8- &7/crates giveall <crate> [amount]'
