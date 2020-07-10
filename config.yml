@@ -1,80 +1,105 @@
 # whether or not all messages should use the prefix
 use-prefix: true
-# if above is true use this as prefix
-prefix: "&8[&cMaskedCrates&8] "
-# broadcast a message to the whole server when a player opens a crate
+prefix: '&8[&cMaskedCrates&8] '
 broadcast-opening: false
-# seconds before player receives rewards on join
 rejoin-reward-receive-delay: 5
-# Crate interaction needs permission, if true players need "maskedcrates.open" to open crates
-# and see crate rewards.
 players-need-permission: false
-# world in which the player cannot open crates
 disabled-world:
-  - "warzone"
-  - "world_nether"
-  - "world_the_end"
-# whether or not player should take damage while opening a crate
-invulnerable-while-opening: true #Not tested
+- warzone
+- world_nether
+- world_the_end
 hooks:
-# should the plugin hook into worldguard (currently not implemented, coming soon)
   worldguard:
     enabled: true
-#   regions in which players cannot open crates
     blacklisted-regions:
-      - "warzone"
-# should the plugin hook into lands
+    - warzone
   lands:
     enabled: true
-#   this one is only affected if the world the enemy land is in, is not disabled
-#   whether or not players can open crates in other's land
-    open-in-enemy-land: false
-# the crate previewer is open when you left-click with a crate to see its rewards
-crate-previewer:
-# the size of the crate preview inventory
-  size: 45
-# the title of the inventory
-  inventory-name: "{crate}&8 Rewards"
-  border-item:
-#   displayname of the border item
-    name: " "
-#   border item material
-    material: BLACK_STAINED_GLASS_PANE
-# slots in which the border item is put
-  border:
-    - 0
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
-    - 7
-    - 8
-    - 36
-    - 37
-    - 39
-    - 40
-    - 41
-    - 43
-    - 44
-# button to go to the next page if there is more than one page worth of rewards
-  next-page:
-#   what slot the next-page item is, make sure it is less then the size of the inventory and greater or equals to zero
-    slot: 42
-#   next-page item displayname
-    name: "&a&lNext page"
-#   next-page item material
-    material: "SPRUCE_BUTTON"
-#   next-page item lore
-    lore:
-      - "&7Click to see next page"
-      - "&8  ----->"
-# previous-page have same settings.
-  previous-page:
-    slot: 38
-    name: "&a&lPrevious page"
-    material: "SPRUCE_BUTTON"
-    lore:
-      - "&7Click to see previous page"
-      - "&8  <-----"
+menus:
+  crate_rewards:
+    rows: 5
+    title: '{crate_name}&8 Rewards'
+    contents:
+      border-item:
+        name: ' '
+        material: BLACK_STAINED_GLASS_PANE
+        slots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 36
+        - 37
+        - 38
+        - 39
+        - 40
+        - 41
+        - 42
+        - 43
+        - 44
+      next-page:
+        slot: 43
+        name: '&a&lNext page'
+        material: SPRUCE_BUTTON
+        lore:
+        - '&7Click to see next page'
+        - '&8  ----->'
+      previous-page:
+        slot: 37
+        name: '&a&lPrevious page'
+        material: SPRUCE_BUTTON
+        lore:
+        - '&7Click to see previous page'
+        - '&8  <-----'
+      back:
+        slot: 40
+        name: '&c&lBack'
+        material: NETHER_STAR
+        lore:
+        - '&7Click to return to'
+        - '&7crates page'
+  crates_menu:
+    rows: 3
+    title: '&8Available crates'
+    contents:
+      border-item:
+        name: ''
+        material: BLACK_STAINED_GLASS_PANE
+        slots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 18
+        - 19
+        - 20
+        - 21
+        - 22
+        - 23
+        - 24
+        - 25
+        - 26
+      next-page:
+        slot: 25
+        name: '&a&lNext page'
+        material: SPRUCE_BUTTON
+        lore:
+        - '&7Click to see next page'
+        - '&8  ----->'
+      previous-page:
+        slot: 19
+        name: '&a&lPrevious page'
+        material: SPRUCE_BUTTON
+        lore:
+        - '&7Click to see previous page'
+        - '&8  <-----'

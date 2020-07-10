@@ -55,7 +55,7 @@
 #         - "eco give {player} 1000"
 #     "3":
 #       name: "&c&lMask Crate"
-# You can use "head-<skintexture>" to display a skull with a texture
+# You can use "skin-<base64>", "player-<playername>", "hbd-<hdb>" to display a skull with a texture
 #       material: "head-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0="
 #       lore:
 #         - "&71 Mask Crate"
@@ -112,7 +112,7 @@ crates:
         - eco give {player} 1000
       '3':
         name: '&c&lExample2 Crate'
-        material: head-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0=
+        material: skin-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0=
         lore:
         - '&71x Example2 Crate'
         amount: 1
@@ -120,7 +120,7 @@ crates:
         commands:
         - crates give {player} example2 1
   example2:
-    name: '&c&lExample Crate'
+    name: '&c&lExample2 Crate'
     skin: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWExZWNhZDQ1NDkzNzg0ZmE2ZmY3OWNhYjBlYTc5ZDk0ZmQ3YWFlMzg0ZDMyYjA3M2E1MTM2MThiZmI1NDBjMSJ9fX0=
     lore:
     - ''
